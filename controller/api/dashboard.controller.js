@@ -11,6 +11,18 @@ const GetAllItem = async (req, res) => {
   }
 };
 
+const GetItemByID = async (req, res) => {
+  try {
+    let { id } = req.query;
+    let data = await DashboardRepository.getItemById(id);
+    res.json(Formatter.success(null, data));
+  } catch (error) {
+    console.log(error);
+    res.json(Formatter.badRequest(error));
+  }
+};
+
 module.exports = {
-  GetAllItem
+  GetAllItem,
+  GetItemByID
 };
