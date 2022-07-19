@@ -15,7 +15,12 @@ app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+    allowedHeaders: ["Content-Type", "Authorization"]
+  })
+);
 app.use(
   expressJwt({ secret: process.env.JWT_SECRET }).unless({
     path: [
