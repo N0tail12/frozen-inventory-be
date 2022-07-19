@@ -12,7 +12,8 @@
     "knex-prod": "cross-env NODE_ENV=prod knex migrate:latest",
     "knex-dev": "knex migrate:latest",
     "knex-make-seed": "knex seed:make",
-    "knex-seed": "knex seed:run"
+    "knex-seed": "knex seed:run",
+    "start": "nodemon app.js"
   },
   "author": "anhbv",
   "license": "ISC",
