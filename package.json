@@ -13,7 +13,7 @@
     "knex-dev": "knex migrate:latest",
     "knex-make-seed": "knex seed:make",
     "knex-seed": "knex seed:run",
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "author": "anhbv",
   "license": "ISC",
